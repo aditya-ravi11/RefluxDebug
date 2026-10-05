@@ -1,0 +1,256 @@
+{
+ "summary": {
+  "runs": 14,
+  "specs_consistent_with_reference": 4,
+  "spec_tests_total": 155,
+  "spec_tests_wrong": 18,
+  "spec_tests_wrong_before_amendments": 18,
+  "specs_consistent_before_amendments": 4,
+  "runs_without_spec": 0,
+  "first_draft_solved": 4,
+  "final_solved": 5,
+  "mean_first_draft_hidden": 0.7341,
+  "mean_final_hidden": 0.7817,
+  "repair_improved": 1,
+  "repair_hurt": 0,
+  "hurt_with_wrong_spec": 0,
+  "tasks_with_wrong_spec": [
+   "semver",
+   "csv_line",
+   "path_norm",
+   "intervals",
+   "isbn",
+   "flatten",
+   "wrap",
+   "topo",
+   "spiral",
+   "rle"
+  ]
+ },
+ "rows": [
+  {
+   "task": "semver",
+   "final_hidden": 0.8667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_property_invalid_version"
+   ],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_property_invalid_version"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.8667,
+   "first_draft_solved": false
+  },
+  {
+   "task": "csv_line",
+   "final_hidden": 0.6667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_invalid_after_quoted_field"
+   ],
+   "spec_tests": 13,
+   "spec_wrong": [
+    "test_example_invalid_after_quoted_field"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.6667,
+   "first_draft_solved": false
+  },
+  {
+   "task": "calc",
+   "final_hidden": 0.2,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [],
+   "spec_tests": 14,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "first_draft_hidden": 0.2,
+   "first_draft_solved": false
+  },
+  {
+   "task": "path_norm",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_other_components",
+    "test_property_no_trailing_slash"
+   ],
+   "spec_tests": 11,
+   "spec_wrong": [
+    "test_example_other_components",
+    "test_property_no_trailing_slash"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "intervals",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_property_merge_intervals_idempotence",
+    "test_property_merge_intervals_sorted",
+    "test_property_merge_intervals_no_modification"
+   ],
+   "spec_tests": 11,
+   "spec_wrong": [
+    "test_property_merge_intervals_idempotence",
+    "test_property_merge_intervals_sorted",
+    "test_property_merge_intervals_no_modification"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "roman",
+   "final_hidden": 0.7647,
+   "final_solved": false,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 11,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "first_draft_hidden": 0.7647,
+   "first_draft_solved": false
+  },
+  {
+   "task": "isbn",
+   "final_hidden": 0.6667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_isbn10_with_x"
+   ],
+   "spec_tests": 13,
+   "spec_wrong": [
+    "test_example_isbn10_with_x"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.6667,
+   "first_draft_solved": false
+  },
+  {
+   "task": "flatten",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_property_flatten_agreement",
+    "test_property_flatten_list_structure",
+    "test_property_flatten_dict_structure"
+   ],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_property_flatten_agreement",
+    "test_property_flatten_list_structure",
+    "test_property_flatten_dict_structure"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.3333,
+   "first_draft_solved": false
+  },
+  {
+   "task": "wrap",
+   "final_hidden": 0.75,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_word_split"
+   ],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_example_word_split"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.75,
+   "first_draft_solved": false
+  },
+  {
+   "task": "base_conv",
+   "final_hidden": 0.8462,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [],
+   "spec_tests": 10,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "first_draft_hidden": 0.8462,
+   "first_draft_solved": false
+  },
+  {
+   "task": "topo",
+   "final_hidden": 0.25,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_property_ordering",
+    "test_property_lexicographical_order"
+   ],
+   "spec_tests": 11,
+   "spec_wrong": [
+    "test_property_ordering",
+    "test_property_lexicographical_order"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 0.25,
+   "first_draft_solved": false
+  },
+  {
+   "task": "duration",
+   "final_hidden": 0.9333,
+   "final_solved": false,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 14,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "first_draft_hidden": 0.9333,
+   "first_draft_solved": false
+  },
+  {
+   "task": "spiral",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_property_same_length",
+    "test_property_spiral_length",
+    "test_property_spiral_elements"
+   ],
+   "spec_tests": 11,
+   "spec_wrong": [
+    "test_property_same_length",
+    "test_property_spiral_length",
+    "test_property_spiral_elements"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "rle",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "<import spec_tests>"
+   ],
+   "spec_tests": 0,
+   "spec_wrong": [
+    "<import spec_tests>"
+   ],
+   "reference_passes_spec": false,
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  }
+ ]
+}

@@ -1,0 +1,7124 @@
+{
+ "summary": {
+  "mutants": 213,
+  "detected": 199,
+  "mutation_score": 0.9343,
+  "first_failure_categories": {
+   "exception": 109,
+   "assertion": 85,
+   "timeout": 5
+  },
+  "traceback_mentions_solution_pct": 0.5477,
+  "silent_logic_bug_pct": 0.4271,
+  "locals_captured_pct": 0.6131,
+  "crash_line_exact_pct_of_exceptions": 0.3303,
+  "property_failures": 35,
+  "falsifying_example_pct_of_property_failures": 0.9143,
+  "operators": {
+   "boolean": 22,
+   "relational": 61,
+   "constant": 96,
+   "arithmetic": 34
+  },
+  "per_task": {
+   "semver": {
+    "mutants": 24,
+    "detected": 20
+   },
+   "csv_line": {
+    "mutants": 24,
+    "detected": 23
+   },
+   "calc": {
+    "mutants": 24,
+    "detected": 23
+   },
+   "path_norm": {
+    "mutants": 2,
+    "detected": 2
+   },
+   "intervals": {
+    "mutants": 10,
+    "detected": 10
+   },
+   "roman": {
+    "mutants": 22,
+    "detected": 20
+   },
+   "isbn": {
+    "mutants": 24,
+    "detected": 24
+   },
+   "flatten": {
+    "mutants": 1,
+    "detected": 1
+   },
+   "wrap": {
+    "mutants": 9,
+    "detected": 7
+   },
+   "base_conv": {
+    "mutants": 16,
+    "detected": 14
+   },
+   "topo": {
+    "mutants": 8,
+    "detected": 8
+   },
+   "duration": {
+    "mutants": 9,
+    "detected": 8
+   },
+   "spiral": {
+    "mutants": 24,
+    "detected": 23
+   },
+   "rle": {
+    "mutants": 16,
+    "detected": 16
+   }
+  }
+ },
+ "records": [
+  {
+   "task": "semver",
+   "operator": "boolean",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_invalid['01.0.0']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1.0.0-01']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "boolean",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 34,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 45,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "boolean",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "boolean",
+   "line": 13,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 37,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 39,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 43,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 46,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 47,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_build_metadata_ignored",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['01.0.0']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1.0.0-01']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 35,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 35,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 41,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_prerelease_lower_than_release",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 47,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 35,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_core_numeric",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "relational",
+   "line": 44,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 44,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 44,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_hyphen_inside_prerelease",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 26,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_spec_precedence_chain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_numeric_vs_alpha_identifiers",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "semver",
+   "operator": "constant",
+   "line": 28,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "boolean",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 24,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 27,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "arithmetic",
+   "line": 31,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_errors",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 31,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quote_inside_unquoted_field_is_literal",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "boolean",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 27,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_plain",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace_preserved",
+     "error_type": "MemoryLimitExceeded",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "relational",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 11,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "csv_line",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "csv_line",
+   "operator": "constant",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_quoted_comma_and_escaped_quote",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_fields",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_errors",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 7,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 77,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "boolean",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_malformed",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 25,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 58,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 66,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 68,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "RecursionError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 41,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 70,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 31,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 33,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "arithmetic",
+   "line": 33,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "arithmetic",
+   "line": 33,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 39,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 44,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "ZeroDivisionError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "ZeroDivisionError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 51,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_power_rules",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "relational",
+   "line": 53,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_power_rules",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 44,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "calc",
+   "operator": "constant",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_precedence",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_power_rules",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_unary_and_decimals",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_division_by_zero",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_malformed",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "path_norm",
+   "operator": "arithmetic",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_special_names",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "path_norm",
+   "operator": "relational",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_special_names",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "relational",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "boolean",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_input_not_modified_and_tuples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "relational",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_input_not_modified_and_tuples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_input_not_modified_and_tuples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "intervals",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_examples",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_covers_same_points",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "boolean",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_invalid['iv']",
+     "error_type": "KeyError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['ABC']",
+     "error_type": "KeyError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "boolean",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['MMMM']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 1,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 1,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 1,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 1,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 1,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "relational",
+   "line": 7,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "boolean",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['MMMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "relational",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "relational",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['MMMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "relational",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "relational",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "arithmetic",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['MMMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "arithmetic",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "roman",
+   "operator": "constant",
+   "line": 18,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_values",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIII']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IC']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IIV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['MMMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['VV']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['LL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['DD']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IXIX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['XCX']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['CMM']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['IL']",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "relational",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_rejects_bad_shapes",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "relational",
+   "line": 12,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 5,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_rejects_bad_shapes",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "boolean",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_rejects_bad_shapes",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "arithmetic",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "relational",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "boolean",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_rejects_bad_shapes",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "boolean",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "arithmetic",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_rejects_bad_shapes",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn10",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "relational",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "isbn",
+   "operator": "constant",
+   "line": 15,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_isbn13",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "flatten",
+   "operator": "boolean",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_nested",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_empty_containers_and_scalars",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "relational",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_width_one_and_errors",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_width_one_and_errors",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "relational",
+   "line": 6,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "wrap",
+   "operator": "relational",
+   "line": 9,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "wrap",
+   "operator": "relational",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_basic",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_long_words",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "arithmetic",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_basic",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_long_words",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_width_one_and_errors",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "arithmetic",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_basic",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_whitespace",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_long_words",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "arithmetic",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_basic",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_long_words",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_width_one_and_errors",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "wrap",
+   "operator": "constant",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_basic",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_long_words",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "boolean",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_bad_base",
+     "error_type": "ZeroDivisionError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "relational",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_to_base",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "arithmetic",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_to_base",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 26,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_to_base",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "relational",
+   "line": 11,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "base_conv",
+   "operator": "boolean",
+   "line": 29,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base_invalid['+7']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid[' 7']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['7 ']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['1_0']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['0x1f']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['12']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['--1']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "arithmetic",
+   "line": 31,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "relational",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_to_base",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 11,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "base_conv",
+   "operator": "relational",
+   "line": 29,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "relational",
+   "line": 29,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base_invalid['12']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "arithmetic",
+   "line": 31,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_to_base",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 23,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['--1']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "base_conv",
+   "operator": "constant",
+   "line": 29,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_from_base_invalid['+7']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid[' 7']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['7 ']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['1_0']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_from_base_invalid['--1']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "relational",
+   "line": 24,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_cycles",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "constant",
+   "line": 7,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "relational",
+   "line": 14,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "constant",
+   "line": 21,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "relational",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "constant",
+   "line": 13,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "constant",
+   "line": 14,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "topo",
+   "operator": "constant",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_simple",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_lexicographic_tie_break",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_prereq_only_nodes_and_duplicates",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "boolean",
+   "line": 5,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "duration",
+   "operator": "boolean",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_invalid['1h1h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['30m1h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1.5h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['10']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1H']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid[' 1h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['-1h']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1h 30m']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1h30']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['s']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['1x']",
+     "error_type": "AttributeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_invalid['\u0661h']",
+     "error_type": "Failed",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "duration",
+   "operator": "arithmetic",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_valid",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "boolean",
+   "line": 2,
+   "detected": false,
+   "failures": []
+  },
+  {
+   "task": "spiral",
+   "operator": "boolean",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "relational",
+   "line": 11,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "relational",
+   "line": 16,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "relational",
+   "line": 7,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 14,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 14,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "relational",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 12,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 14,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "arithmetic",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_ragged_and_not_modified",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 22,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 2,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_degenerate",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "spiral",
+   "operator": "constant",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_square_and_rect",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 3,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "relational",
+   "line": 4,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "boolean",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "arithmetic",
+   "line": 8,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "relational",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "MemoryLimitExceeded",
+     "category": "exception",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 17,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_decode_errors",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_decode_errors",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 20,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "ValueError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "relational",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "relational",
+   "line": 6,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "TestTimeout",
+     "category": "timeout",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 7,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 9,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "arithmetic",
+   "line": 24,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "TypeError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 10,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_encode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "arithmetic",
+   "line": 24,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": false,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "AssertionError",
+     "category": "assertion",
+     "traceback_mentions_solution": false,
+     "crash_line_exact": false,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  },
+  {
+   "task": "rle",
+   "operator": "constant",
+   "line": 24,
+   "detected": true,
+   "failures": [
+    {
+     "test": "test_decode",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": false,
+     "is_property_test": false
+    },
+    {
+     "test": "test_round_trip",
+     "error_type": "IndexError",
+     "category": "exception",
+     "traceback_mentions_solution": true,
+     "crash_line_exact": true,
+     "locals_captured": true,
+     "has_falsifying_example": true,
+     "is_property_test": true
+    }
+   ]
+  }
+ ]
+}

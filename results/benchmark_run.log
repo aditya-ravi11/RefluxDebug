@@ -1,0 +1,38 @@
+──────────────────────────────────────────────────── semver Semantic version comparison ────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 93%  calls 19  109.79s
+───────────────────────────────────────────────────────── csv_line CSV line parser ─────────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 67%  calls 20  79.5s
+─────────────────────────────────────────────────── calc Arithmetic expression evaluator ───────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 20%  calls 19  75.07s
+──────────────────────────────────────────────────── path_norm Unix path normalisation ─────────────────────────────────────────────────────
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  85.95s
+──────────────────────────────────────────────────── intervals Closed interval merging ─────────────────────────────────────────────────────
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 3  19.8s
+──────────────────────────────────────────────────── roman Strict Roman numeral parser ─────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 71%  calls 19  66.87s
+───────────────────────────────────────────────────── isbn ISBN-10 / ISBN-13 validator ─────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 67%  calls 19  92.81s
+────────────────────────────────────────────────────── flatten Nested JSON flattening ──────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 67%  calls 19  98.4s
+────────────────────────────────────────────────────────── wrap Greedy word wrap ───────────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 75%  calls 19  92.01s
+───────────────────────────────────────────────────── base_conv Strict base conversion ─────────────────────────────────────────────────────
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 4  33.23s
+─────────────────────────────────────────────────── topo Deterministic topological order ───────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 25%  calls 3  23.61s
+───────────────────────────────────────────────────── duration Strict duration parser ──────────────────────────────────────────────────────
+  ReflexDebug (full)   not solved  hidden 93%  calls 4  39.72s
+────────────────────────────────────────────────────── spiral Spiral matrix traversal ──────────────────────────────────────────────────────
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 4  27.01s
+────────────────────────────────────────────────── rle Run-length codec with bounded runs ──────────────────────────────────────────────────
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 19  92.04s
+                                        Ablation summary (hidden tests)                                        
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┓
+┃ strategy           ┃ solved ┃ solve rate ┃ hidden pass ┃ false conf. ┃ LLM calls ┃ tokens ┃ cost $ ┃ time s ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━┩
+│ One-shot           │   6/14 │        43% │         73% │           0 │       1.0 │    610 │ 0.0032 │    4.5 │
+│ Traceback loop     │   5/14 │        36% │         76% │           2 │      7.21 │   7208 │ 0.0300 │   31.6 │
+│ Rich feedback      │   5/14 │        36% │         82% │           2 │     11.14 │  16628 │ 0.0633 │   83.8 │
+│ ReflexDebug (full) │   5/14 │        36% │         77% │           2 │      13.5 │  40965 │ 0.1046 │   66.8 │
+└────────────────────┴────────┴────────────┴─────────────┴─────────────┴───────────┴────────┴────────┴────────┘
+Saved /Users/aditya/gen ai lab ca/results/benchmark.json and /Users/aditya/gen ai lab ca/results/benchmark.csv

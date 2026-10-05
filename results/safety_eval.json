@@ -1,0 +1,98 @@
+{
+ "summary": {
+  "hostile_samples": 26,
+  "hostile_blocked": 26,
+  "benign_samples": 31,
+  "benign_accepted": 31,
+  "resource_abuse_samples": 5,
+  "resource_abuse_contained": 5
+ },
+ "hostile": {
+  "os.system shell": true,
+  "subprocess": true,
+  "from-import os": true,
+  "shutil rmtree": true,
+  "socket exfiltration": true,
+  "urllib network": true,
+  "ctypes": true,
+  "importlib": true,
+  "__import__": true,
+  "eval": true,
+  "exec": true,
+  "compile": true,
+  "open write": true,
+  "open read": true,
+  "subclasses escape": true,
+  "mro escape": true,
+  "globals via function": true,
+  "builtins dict": true,
+  "getattr dunder": true,
+  "getattr computed": true,
+  "frame walk": true,
+  "sys module": true,
+  "pickle": true,
+  "relative import": true,
+  "breakpoint": true,
+  "input": true
+ },
+ "benign": {
+  "reference:semver": true,
+  "reference:csv_line": true,
+  "reference:calc": true,
+  "reference:path_norm": true,
+  "reference:intervals": true,
+  "reference:roman": true,
+  "reference:isbn": true,
+  "reference:flatten": true,
+  "reference:wrap": true,
+  "reference:base_conv": true,
+  "reference:topo": true,
+  "reference:duration": true,
+  "reference:spiral": true,
+  "reference:rle": true,
+  "hidden_tests:semver": true,
+  "hidden_tests:csv_line": true,
+  "hidden_tests:calc": true,
+  "hidden_tests:path_norm": true,
+  "hidden_tests:intervals": true,
+  "hidden_tests:roman": true,
+  "hidden_tests:isbn": true,
+  "hidden_tests:flatten": true,
+  "hidden_tests:wrap": true,
+  "hidden_tests:base_conv": true,
+  "hidden_tests:topo": true,
+  "hidden_tests:duration": true,
+  "hidden_tests:spiral": true,
+  "hidden_tests:rle": true,
+  "demo:buggy": true,
+  "demo:fixed": true,
+  "demo:tests": true
+ },
+ "abuse": {
+  "infinite loop": {
+   "contained": true,
+   "reported_as": "TestTimeout",
+   "seconds": 3.28
+  },
+  "memory bomb": {
+   "contained": true,
+   "reported_as": "MemoryLimitExceeded",
+   "seconds": 0.41
+  },
+  "deep recursion": {
+   "contained": true,
+   "reported_as": "RecursionError",
+   "seconds": 0.23
+  },
+  "output flood": {
+   "contained": true,
+   "reported_as": "MemoryLimitExceeded",
+   "seconds": 0.6
+  },
+  "exponential work": {
+   "contained": true,
+   "reported_as": "TestTimeout",
+   "seconds": 3.24
+  }
+ }
+}

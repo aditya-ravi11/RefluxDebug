@@ -1,0 +1,44 @@
+──────────────────────────────────────────────────── semver Semantic version comparison ────────────────────────────────────────────────────
+  One-shot             not solved  hidden 67%  calls 1  6.33s
+  Traceback loop       not solved  hidden 80%  calls 3  20.65s
+  Rich feedback        not solved  hidden 80%  calls 13  117.28s
+  ReflexDebug (full)   not solved  hidden 73%  calls 12  51.53s
+───────────────────────────────────────────────────────── csv_line CSV line parser ─────────────────────────────────────────────────────────
+  One-shot             not solved  hidden 0%  calls 1  3.32s
+  Traceback loop       not solved  hidden 83%  calls 7  32.73s
+  Rich feedback        not solved  hidden 83%  calls 15  219.46s
+  ReflexDebug (full)   not solved  hidden 0%  calls 3  533.54s  RuntimeError: could not synthesise a usable specification
+─────────────────────────────────────────────────── calc Arithmetic expression evaluator ───────────────────────────────────────────────────
+  One-shot             not solved  hidden 0%  calls 1  6.54s
+  Traceback loop       not solved  hidden 60%  calls 12  99.18s
+  Rich feedback        not solved  hidden 60%  calls 13  91.33s
+  ReflexDebug (full)   not solved  hidden 20%  calls 20  128.17s
+──────────────────────────────────────────────────── path_norm Unix path normalisation ─────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  2.17s
+  Traceback loop       SOLVED  hidden 100%  calls 2  8.5s
+  Rich feedback        SOLVED  hidden 100%  calls 13  142.4s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  110.27s
+──────────────────────────────────────────────────── intervals Closed interval merging ─────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  1.95s
+  Traceback loop       not solved  hidden 0%  calls 1  3.56s  AttributeError: 'list' object has no attribute 'rstrip'
+  Rich feedback        SOLVED  hidden 100%  calls 3  13.8s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 3  14.72s
+──────────────────────────────────────────────────── roman Strict Roman numeral parser ─────────────────────────────────────────────────────
+  One-shot             not solved  hidden 41%  calls 1  3.42s
+  Traceback loop       not solved  hidden 76%  calls 12  77.41s
+  Rich feedback        not solved  hidden 71%  calls 13  121.57s
+  ReflexDebug (full)   not solved  hidden 59%  calls 18  80.21s
+───────────────────────────────────────────────────── isbn ISBN-10 / ISBN-13 validator ─────────────────────────────────────────────────────
+  One-shot             not solved  hidden 33%  calls 1  3.99s
+  Traceback loop       not solved  hidden 33%  calls 12  78.65s
+  Rich feedback        not solved  hidden 67%  calls 13  172.86s
+  ReflexDebug (full)   not solved  hidden 67%  calls 18  119.39s
+────────────────────────────────────────────────────── flatten Nested JSON flattening ──────────────────────────────────────────────────────
+  One-shot             not solved  hidden 33%  calls 1  2.65s
+  Traceback loop       not solved  hidden 33%  calls 2  7.05s
+  Rich feedback        SOLVED  hidden 100%  calls 8  56.95s
+  ReflexDebug (full)   not solved  hidden 33%  calls 20  79.36s  LLM call budget of 20 exhausted
+────────────────────────────────────────────────────────── wrap Greedy word wrap ───────────────────────────────────────────────────────────
+  One-shot             not solved  hidden 75%  calls 1  6.12s
+  Traceback loop       not solved  hidden 75%  calls 12  52.07s
+  Rich feedback        not solved  hidden 50%  calls 13  73.12s

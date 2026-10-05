@@ -1,0 +1,403 @@
+{
+ "summary": {
+  "runs": 14,
+  "specs_consistent_with_reference": 7,
+  "spec_tests_total": 169,
+  "spec_tests_wrong": 13,
+  "spec_tests_wrong_before_amendments": 17,
+  "specs_consistent_before_amendments": 7,
+  "runs_without_spec": 0,
+  "triage_amendments": 27,
+  "triage_justified": 14,
+  "first_draft_solved": 5,
+  "final_solved": 5,
+  "mean_first_draft_hidden": 0.6753,
+  "mean_final_hidden": 0.7695,
+  "repair_improved": 4,
+  "repair_hurt": 0,
+  "hurt_with_wrong_spec": 0,
+  "tasks_with_wrong_spec": [
+   "semver",
+   "csv_line",
+   "path_norm",
+   "isbn",
+   "flatten",
+   "wrap",
+   "rle"
+  ]
+ },
+ "rows": [
+  {
+   "task": "semver",
+   "final_hidden": 0.9333,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_pre_release_identifiers_numeric_vs_alpha",
+    "test_example_invalid_version_raises",
+    "test_property_valid_version"
+   ],
+   "spec_tests": 13,
+   "spec_wrong": [
+    "test_example_invalid_version_raises"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_example_pre_release_identifiers_numeric_vs_alpha",
+     "verdict": "fix",
+     "justified": true
+    },
+    {
+     "test": "test_property_valid_version",
+     "verdict": "remove",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 0.7333,
+   "first_draft_solved": false
+  },
+  {
+   "task": "csv_line",
+   "final_hidden": 0.6667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_example_invalid_character_after_quoted_field"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_example_invalid_character_after_quoted_field",
+     "verdict": "fix",
+     "justified": false
+    }
+   ],
+   "first_draft_hidden": 0.6667,
+   "first_draft_solved": false
+  },
+  {
+   "task": "calc",
+   "final_hidden": 0.2,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [],
+   "spec_tests": 11,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [
+    {
+     "test": "test_example_power_expression",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_example_unary_minus",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_example_parentheses",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_example_malformed_expression_dangling_operator",
+     "verdict": "fix",
+     "justified": false
+    }
+   ],
+   "first_draft_hidden": 0.2,
+   "first_draft_solved": false
+  },
+  {
+   "task": "path_norm",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_complex_path",
+    "test_property_normalize_path",
+    "test_property_no_trailing_slash",
+    "test_property_idempotence"
+   ],
+   "spec_tests": 13,
+   "spec_wrong": [
+    "test_example_complex_path",
+    "test_property_normalize_path",
+    "test_property_no_trailing_slash",
+    "test_property_idempotence"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_property_normalize_path",
+     "verdict": "fix",
+     "justified": true
+    },
+    {
+     "test": "test_property_no_trailing_slash",
+     "verdict": "fix",
+     "justified": true
+    },
+    {
+     "test": "test_property_idempotence",
+     "verdict": "fix",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "intervals",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 11,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [],
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "roman",
+   "final_hidden": 0.7059,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [],
+   "spec_tests": 10,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [
+    {
+     "test": "test_example_valid_2",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_example_valid_4",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_property_valid_range",
+     "verdict": "remove",
+     "justified": false
+    },
+    {
+     "test": "test_property_idempotence",
+     "verdict": "remove",
+     "justified": false
+    }
+   ],
+   "first_draft_hidden": 0.5882,
+   "first_draft_solved": false
+  },
+  {
+   "task": "isbn",
+   "final_hidden": 0.6667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_valid_isbn10_with_x"
+   ],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_example_valid_isbn10_with_x"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_property_isbn10_validity",
+     "verdict": "remove",
+     "justified": false
+    }
+   ],
+   "first_draft_hidden": 0.0,
+   "first_draft_solved": false
+  },
+  {
+   "task": "flatten",
+   "final_hidden": 0.6667,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_empty_list",
+    "test_property_flatten_agreement",
+    "test_property_flatten_dict_structure"
+   ],
+   "spec_tests": 10,
+   "spec_wrong": [
+    "test_example_list_with_empty_dict",
+    "test_example_list_with_empty_list",
+    "test_property_flatten_list_structure"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_example_empty_list",
+     "verdict": "fix",
+     "justified": true
+    },
+    {
+     "test": "test_example_list_with_empty_dict",
+     "verdict": "fix",
+     "justified": false
+    },
+    {
+     "test": "test_example_list_with_empty_list",
+     "verdict": "fix",
+     "justified": false
+    },
+    {
+     "test": "test_property_flatten_agreement",
+     "verdict": "remove",
+     "justified": true
+    },
+    {
+     "test": "test_property_flatten_dict_structure",
+     "verdict": "remove",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 0.3333,
+   "first_draft_solved": false
+  },
+  {
+   "task": "wrap",
+   "final_hidden": 0.75,
+   "final_solved": false,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_long_word_with_following_words"
+   ],
+   "spec_tests": 14,
+   "spec_wrong": [
+    "test_example_long_word_with_following_words"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_example_long_word_with_following_words",
+     "verdict": "fix",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 0.75,
+   "first_draft_solved": false
+  },
+  {
+   "task": "base_conv",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 13,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [],
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "topo",
+   "final_hidden": 0.25,
+   "final_solved": false,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 11,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [],
+   "first_draft_hidden": 0.25,
+   "first_draft_solved": false
+  },
+  {
+   "task": "duration",
+   "final_hidden": 0.9333,
+   "final_solved": false,
+   "self_verified": true,
+   "spec_wrong_initial": [],
+   "spec_tests": 18,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [
+    {
+     "test": "test_property_agreement_with_brute_force",
+     "verdict": "remove",
+     "justified": false
+    }
+   ],
+   "first_draft_hidden": 0.9333,
+   "first_draft_solved": false
+  },
+  {
+   "task": "spiral",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": true,
+   "spec_wrong_initial": [
+    "test_property_same_length",
+    "test_property_spiral_length",
+    "test_property_spiral_elements"
+   ],
+   "spec_tests": 9,
+   "spec_wrong": [],
+   "reference_passes_spec": true,
+   "triage": [
+    {
+     "test": "test_property_same_length",
+     "verdict": "remove",
+     "justified": true
+    },
+    {
+     "test": "test_property_spiral_length",
+     "verdict": "remove",
+     "justified": true
+    },
+    {
+     "test": "test_property_spiral_elements",
+     "verdict": "remove",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  },
+  {
+   "task": "rle",
+   "final_hidden": 1.0,
+   "final_solved": true,
+   "self_verified": false,
+   "spec_wrong_initial": [
+    "test_example_digits_in_string",
+    "test_property_idempotence"
+   ],
+   "spec_tests": 12,
+   "spec_wrong": [
+    "test_example_digits_in_string",
+    "test_property_idempotence"
+   ],
+   "reference_passes_spec": false,
+   "triage": [
+    {
+     "test": "test_example_digits_in_string",
+     "verdict": "fix",
+     "justified": true
+    },
+    {
+     "test": "test_property_idempotence",
+     "verdict": "fix",
+     "justified": true
+    }
+   ],
+   "first_draft_hidden": 1.0,
+   "first_draft_solved": true
+  }
+ ]
+}

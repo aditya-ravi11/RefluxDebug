@@ -1,0 +1,80 @@
+──────────────────────────────────────────────────── semver Semantic version comparison ────────────────────────────────────────────────────
+  One-shot             not solved  hidden 93%  calls 1  8.98s
+  Traceback loop       not solved  hidden 93%  calls 3  15.83s
+  Rich feedback        not solved  hidden 80%  calls 13  93.99s
+  ReflexDebug (full)   not solved  hidden 87%  calls 18  85.18s
+───────────────────────────────────────────────────────── csv_line CSV line parser ─────────────────────────────────────────────────────────
+  One-shot             not solved  hidden 33%  calls 1  4.01s
+  Traceback loop       not solved  hidden 67%  calls 13  52.36s
+  Rich feedback        not solved  hidden 83%  calls 14  131.83s
+  ReflexDebug (full)   not solved  hidden 67%  calls 18  63.0s
+─────────────────────────────────────────────────── calc Arithmetic expression evaluator ───────────────────────────────────────────────────
+  One-shot             not solved  hidden 0%  calls 1  7.71s
+  Traceback loop       not solved  hidden 0%  calls 12  89.52s
+  Rich feedback        not solved  hidden 0%  calls 14  110.38s
+  ReflexDebug (full)   not solved  hidden 20%  calls 18  62.82s
+──────────────────────────────────────────────────── path_norm Unix path normalisation ─────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  2.06s
+  Traceback loop       SOLVED  hidden 100%  calls 2  5.92s
+  Rich feedback        SOLVED  hidden 100%  calls 3  25.66s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  69.01s
+──────────────────────────────────────────────────── intervals Closed interval merging ─────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  2.32s
+  Traceback loop       SOLVED  hidden 100%  calls 2  7.18s
+  Rich feedback        not solved  hidden 75%  calls 3  13.3s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  77.17s
+──────────────────────────────────────────────────── roman Strict Roman numeral parser ─────────────────────────────────────────────────────
+  One-shot             not solved  hidden 59%  calls 1  3.74s
+  Traceback loop       not solved  hidden 71%  calls 12  58.77s
+  Rich feedback        not solved  hidden 76%  calls 13  83.22s
+  ReflexDebug (full)   not solved  hidden 76%  calls 3  17.67s
+───────────────────────────────────────────────────── isbn ISBN-10 / ISBN-13 validator ─────────────────────────────────────────────────────
+  One-shot             not solved  hidden 33%  calls 1  3.62s
+  Traceback loop       not solved  hidden 33%  calls 12  46.85s
+  Rich feedback        not solved  hidden 67%  calls 13  93.07s
+  ReflexDebug (full)   not solved  hidden 67%  calls 19  70.49s
+────────────────────────────────────────────────────── flatten Nested JSON flattening ──────────────────────────────────────────────────────
+  One-shot             not solved  hidden 33%  calls 1  3.16s
+  Traceback loop       not solved  hidden 33%  calls 2  6.06s
+  Rich feedback        SOLVED  hidden 100%  calls 14  93.08s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  84.87s
+────────────────────────────────────────────────────────── wrap Greedy word wrap ───────────────────────────────────────────────────────────
+  One-shot             not solved  hidden 75%  calls 1  3.81s
+  Traceback loop       not solved  hidden 75%  calls 12  34.54s
+  Rich feedback        not solved  hidden 75%  calls 13  88.55s
+  ReflexDebug (full)   not solved  hidden 75%  calls 18  79.93s
+───────────────────────────────────────────────────── base_conv Strict base conversion ─────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  5.98s
+  Traceback loop       not solved  hidden 92%  calls 12  56.15s
+  Rich feedback        not solved  hidden 92%  calls 13  101.73s
+  ReflexDebug (full)   not solved  hidden 85%  calls 18  66.12s
+─────────────────────────────────────────────────── topo Deterministic topological order ───────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  6.02s
+  Traceback loop       SOLVED  hidden 100%  calls 3  12.24s
+  Rich feedback        SOLVED  hidden 100%  calls 13  111.15s
+  ReflexDebug (full)   not solved  hidden 25%  calls 18  99.3s
+───────────────────────────────────────────────────── duration Strict duration parser ──────────────────────────────────────────────────────
+  One-shot             not solved  hidden 93%  calls 1  2.57s
+  Traceback loop       not solved  hidden 93%  calls 12  42.15s
+  Rich feedback        not solved  hidden 93%  calls 4  25.34s
+  ReflexDebug (full)   not solved  hidden 93%  calls 4  21.89s
+────────────────────────────────────────────────────── spiral Spiral matrix traversal ──────────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  3.12s
+  Traceback loop       SOLVED  hidden 100%  calls 2  6.77s
+  Rich feedback        SOLVED  hidden 100%  calls 13  67.33s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 18  85.7s
+────────────────────────────────────────────────── rle Run-length codec with bounded runs ──────────────────────────────────────────────────
+  One-shot             SOLVED  hidden 100%  calls 1  5.44s
+  Traceback loop       SOLVED  hidden 100%  calls 2  7.69s
+  Rich feedback        SOLVED  hidden 100%  calls 13  134.0s
+  ReflexDebug (full)   SOLVED  hidden 100%  calls 19  70.9s
+                                        Ablation summary (hidden tests)                                        
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┓
+┃ strategy           ┃ solved ┃ solve rate ┃ hidden pass ┃ false conf. ┃ LLM calls ┃ tokens ┃ cost $ ┃ time s ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━┩
+│ One-shot           │   6/14 │        43% │         73% │           0 │       1.0 │    610 │ 0.0032 │    4.5 │
+│ Traceback loop     │   5/14 │        36% │         76% │           2 │      7.21 │   7208 │ 0.0300 │   31.6 │
+│ Rich feedback      │   5/14 │        36% │         82% │           2 │     11.14 │  16628 │ 0.0633 │   83.8 │
+│ ReflexDebug (full) │   5/14 │        36% │         78% │           2 │     16.07 │  53899 │ 0.1352 │   68.1 │
+└────────────────────┴────────┴────────────┴─────────────┴─────────────┴───────────┴────────┴────────┴────────┘
+Saved /Users/aditya/gen ai lab ca/results/benchmark.json and /Users/aditya/gen ai lab ca/results/benchmark.csv
